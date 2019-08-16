@@ -1,0 +1,112 @@
+/* Headermessage design */
+.headermessage{
+    color:black;
+    font-family: 'Reenie Beanie';
+    font-size:33px;
+    text-align: center;
+
+}
+
+/* Background image design */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Logout button design */
+input[class="logout"]{
+    background-color: yellowgreen;
+    border: none;
+    float: right;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-family: 'Reenie Beanie';
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+  }
+input[class="logout"]:hover{
+    cursor: pointer;
+}
+
+/* Header post-it design */
+.headerpostit{
+    height:300px;
+    width:300px;
+    margin:auto;
+    border-bottom-right-radius: 60px 5px;
+    background:#ffff88;
+    font-family: 'Reenie Beanie';
+}
+
+/*Header post-it button design */
+input[class="postit"]{
+    background: url('images/highlight.png');
+    text-align: center;
+    border-style:none;
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    position:relative;
+    left: 115px;
+    top: 80px;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+    color:white;
+
+}
+input[class="postit"]:hover{
+    cursor: pointer;
+}
+
+/*Text area of the header post-it design */
+textarea {
+    background-color : #ffff88;
+    border-style:none;
+    text-align: center;
+    position:relative;
+    top: 25px;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+    color: red;
+  }
+
+  .all_postits{
+    font-size: 22px;
+    margin-top:20px;
+    text-align: center;
+}
+
+.delete {
+position: relative;
+}
+
+.one_postit{
+    height:350px; 
+    width:300px; 
+    margin:auto; 
+    margin-top:10px;
+    border-bottom-right-radius: 60px 5px;
+    background:#ffff88;
+    font-family: 'Reenie Beanie'; 
+    text-align: center;
+    display:inline-block;
+}
+
+h2{
+    color:black;
+}
+
+p{
+    color:red;
+}
+
+.errormessagesall_postits{
+    color:white;
+    display:inline-block;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+    }
+

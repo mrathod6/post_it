@@ -1,0 +1,73 @@
+h2 {
+    color:blue;
+    font-size: 50px;
+}
+
+/* Body design - background is fixed so everything scrolls above it*/
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Aligns everything on the login page to the center */
+.logincontainer{
+    text-align: center;
+  }
+
+/* Login post-it note */
+.login {
+    height:410px;
+    width:300px;
+    margin:auto;
+    margin-top:0px;
+    border-bottom-right-radius: 60px 5px;
+    background:#ffff88;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+    display:inline-block;}
+
+/* Form title design */
+p {
+    font-weight:bold;
+    color: black;
+    display: inline-block;
+    }
+
+/* Form design */
+input[class="login_form"] {
+    background-color : #ffff88;
+    border-style:none;
+    color:red;
+    font-family: 'Reenie Beanie'; 
+    font-size: 25px; 
+}
+
+/* login button design */
+input[type="submit"]{
+    background: url('images/highlight.png');
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 10px 10px;
+    background-color: transparent;
+    border-style:none;
+    display: inline-block;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+    color:white;
+    font-weight:bold;
+}
+
+/* Login link at the bottom */
+.backlink
+{
+    margin-top:20px;
+}
+
+/* Error Messages design */
+.errormessageslogin{
+    color:white;
+    display:inline-block;
+    font-family: 'Reenie Beanie';
+    font-size: 25px;
+  }

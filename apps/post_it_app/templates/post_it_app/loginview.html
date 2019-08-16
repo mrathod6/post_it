@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Login</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'post_it_app/css/loginview.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="errormessageslogin">
+
+        {% if messages %}
+
+        <ul>
+
+            {% for message in messages %}
+
+            <li>{{ message }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% endif %}
+
+    </div>
+
+<div class = "logincontainer">
+
+    <div class="login">
+
+        <h2>Login</h2>
+
+        <form action='/login' method='POST'>
+
+            {% csrf_token %}
+
+            <p>Email: <br><input type="text" class="login_form" name="e_mail" placeholder="E-Mail goes here..." maxlength="50"></p>
+
+            <p>Password: <br><input type="password" class="login_form" name="pwrd" placeholder="Password..." maxlength="50"></p>
+
+            <br>
+
+            <input type="submit" value="login">
+
+        </form>
+
+    </div>
+
+    <div class = "backlink"
+
+    <h1> Back to the registration page? <a href="/">Click here...</a></h1>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+

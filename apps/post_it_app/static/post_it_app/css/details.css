@@ -1,0 +1,58 @@
+/* Details Post-It design */
+.onepostit{
+    height:300px;
+    width:300px;
+    margin:auto; 
+    border-bottom-right-radius: 60px 5px;
+    background:#ffff88;
+    font-family: 'Reenie Beanie';
+    text-align:center;
+    font-size:22px;
+}
+/* Body design */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Users that liked design */
+.usersthatliked
+{
+    font-family: 'Reenie Beanie';
+    font-size: 35px;
+    text-align: center;
+    color:white;
+}
+
+/* Logout button design */
+input[class="logout"]{
+    background-color: yellowgreen;
+    border: none;
+    float: right;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-family: 'Reenie Beanie';
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+  }
+input[class="logout"]:hover{
+    cursor: pointer;
+}
+
+/* Back Link design */
+a {
+    background: url('images/highlight.png');
+    text-align: center;
+    border-style:none;
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    position:relative;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    text-decoration:none;
+}

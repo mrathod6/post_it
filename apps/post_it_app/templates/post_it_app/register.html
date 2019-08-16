@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Post-it Registration Page</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'post_it_app/css/register.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="registrationerrormessages">
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+</div>
+
+<div class = "registercontainer">
+
+    <div class="register">
+
+        <h2>Create Account</h2>
+
+        <form action='/registration' method='POST'>
+
+            {% csrf_token %}
+
+            <p>First Name: <input type="text" class = "registration_form" name="f_name" placeholder="First Name goes here..." maxlength="50"></p>
+
+            <p>Last Name: <input type="text" class = "registration_form" name="l_name" placeholder="Last Name goes here..." maxlength="50"></p>
+
+            <p>Email: <br><input type="text" class = "registration_form" name="e_mail" placeholder="E-Mail goes here..." maxlength="50"></p>
+
+            <p>Password: <br><input type="password" class = "registration_form" name="pwrd" placeholder="You guessed it!" maxlength="50"></p>
+
+            <p>Password (confirm): <input type="password" class = "registration_form" name="c_pwrd" placeholder="Confirm password" maxlength="50"></p>
+
+            <input type="submit" value="Register">
+
+        </form>
+
+    </div>
+
+    <div class = "logintext"
+
+    <h1> Not your first time here...? <a href="loginview">Login here...</a></h1>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+

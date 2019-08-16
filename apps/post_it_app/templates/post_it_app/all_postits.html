@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Welcome {{user.first_name}} {{user.last_name}}!</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'post_it_app/css/all_postits.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
+    <div class = "headermessage">
+    
+        <h1>Hi {{user.first_name}} {{user.last_name}}, you have successfully logged in!</h1>
+    
+        <form action='/logout' method='POST'>
+    
+            {% csrf_token %}
+    
+            <p><input type="submit" class = "logout" value="Logout"></p>
+    
+        </form>
+    
+    </div>
+    
+    <div class = "errormessagesall_postits">
+    
+        {% if messages %}
+    
+        <ul>
+    
+            {% for message in messages %}
+    
+            <li>{{ message }}</li>
+    
+            {% endfor %}
+    
+        </ul>
+    
+        {% endif %}
+    
+    </div>
+    
+</head>
+
+<body>
+
+    <div class="headerpostit">
+
+        <form action='/add_postit' method='POST'>
+
+            {% csrf_token %}
+
+            <textarea name="message" class="message" id="message" cols="30" rows="5" placeholder="Post a message..." maxlength="50"></textarea>
+
+            <input type="submit" class = "postit" value="Post it!">
+
+        </form>
+
+    </div>
+
+
+    
+    <div class="all_postits">
+    
+        {% for x in all_the_postits %}
+    
+        <div class="one_postit">
+    
+            <h2><u>From: </u></h2><h2>{{ x.author.first_name }}</h2> 
+    
+            <br>
+    
+            <p>{{ x.messages }}</p>
+    
+            <p>{% if x.author.id == user.id %}</p>
+    
+            <a class = "delete" href="/delete/{{x.id}}">Delete</a>
+    
+            {% endif %}
+    
+            <p>{{ x.count }}</p>
+    
+            <p>{{ x.author.like }}</p>
+    
+            <p><b>View:</b><a href="/details/{{x.id}}">View</a><b>|</b>{{ x.likes.all.count }} </b><a href="/like/{{x.id}}">Like</a><b>|</b>Like Count:{{ x.likes.all.count }}</p>
+    
+        </div>
+    
+        {% endfor %}
+    
+    </div>
+    
+</html>
+

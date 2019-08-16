@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Post it Details</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'post_it_app/css/details.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <div class="logout">
+
+        <form action='/logout' method='POST'>
+
+            {% csrf_token %}
+
+            <input type="submit" class = "logout" value="Logout">
+
+        </form>
+
+    </div>
+
+</head>
+
+
+
+<body>
+
+    <div class = "onepostit">
+
+        <h2>From: </h2> <h2>{{ particular_postit.author.first_name }}</h2> 
+
+        <br>
+
+        <p>{{ particular_postit.messages }}</p>
+
+        <span class = "highlight"><p><a href="/home">Back</a></p></span>
+
+    </div>
+
+
+<div class="usersthatlikedcontainer">
+
+ <div class="usersthatliked">
+
+    <h2><u>All the users that liked this post</u></h2>
+
+    {% for x in likes %}
+
+    <p>{{ x.first_name }} {{x.last_name}}</p>
+
+    {% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
